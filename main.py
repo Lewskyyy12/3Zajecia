@@ -98,17 +98,20 @@ from math import *
 # print(znaki)
 
 
-A= [1-x for x in range(1,11)]
+A = [1-x for x in range(1,11)]
 print(A)
-B= [4**x for x in range(0,8)]
+B = [4**x for x in range(0,8)]
 print(B)
-C= [x for x in B if x % 2 == 0]
+C = [x for x in B if x % 2 == 0]
 print(C)
-randomy = []
+
+
+randomowe = []
 for i in range(10):
-    randomy.append(random.randint(1,100))
-print(randomy)
-RandParz = [x for x in randomy if x % 2 == 0]
+    a = random.randint(1, 100)
+    randomowe.append(a)
+print(randomowe)
+RandParz = [x for x in randomowe if x % 2 == 0]
 print(RandParz)
 
 produkty = {'jajka': 'szt', 'wedlina': 'plasterki', 'mleko': 'litry', 'chipsy' : 'paczki', 'ziemniaki' : 'kg' }
@@ -119,21 +122,21 @@ def CzyTrojkat(a, b, c):
     if (a ** 2 == b ** 2 * c ** 2):
         return 1
 def CzyProstokatny(a, b, c):
-    if CzyTrojkat(a ,b ,c) or CzyTrojkat(c ,a ,b) or CzyTrojkat(b ,a ,c):
-        if(a==b):
+    if CzyTrojkat(a, b, c) or CzyTrojkat(c, a, b) or CzyTrojkat(b, a, c):
+        if a == b:
             print('Jest prostokatny')
-        if(a==c):
+        if a == c:
             print('Jest prostokatny')
-        if(b==c):
+        if b == c:
             print('Jest prostokatny')
     else:
         print('To nie trojkat')
 
 
-CzyProstokatny(2,2,4)
-CzyProstokatny(3,3,6)
+CzyProstokatny(2, 2, 4)
+CzyProstokatny(3, 3, 6)
 
-def PoleTrapezu(a=3,b=4,h=7):
+def PoleTrapezu(a=3, b=4, h=7):
     Pole = ((a+b)*h)/2
     return Pole
 
@@ -143,10 +146,11 @@ def IloczynCiagu(a=1, b=4, ile=10):
     for i in range(ile):
         a=a*b
     return a
+
 print(IloczynCiagu())
 
 try:
-    a=int(input())
+    a = int(input())
     print(sqrt(a))
 except ValueError:
     print('Wartosc ujemna')
