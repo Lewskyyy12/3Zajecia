@@ -1,3 +1,5 @@
+import random
+from math import *
 
 # try:
 #     a = int(input())
@@ -94,3 +96,51 @@
 #     znaki = plik.read(10)
 #
 # print(znaki)
+
+
+A= [1-x for x in range(1,11)]
+print(A)
+B= [4**x for x in range(0,8)]
+print(B)
+C= [x for x in B if x % 2 == 0]
+print(C)
+randomy = []
+for i in range(10):
+    randomy.append(random.randint(1,100))
+print(randomy)
+RandParz = [x for x in randomy if x % 2 == 0]
+print(RandParz)
+
+produkty = {'jajka': 'szt', 'wedlina': 'plasterki', 'mleko': 'litry', 'chipsy' : 'paczki', 'ziemniaki' : 'kg' }
+produkty2 = {v: k for k, v in produkty.items()}
+print(produkty)
+print(produkty2)
+
+def CzyProstokatny(a, b, c):
+    if(a==b):
+        print('Prostokatny')
+    elif(a==c):
+        print('Prostokatny')
+    elif(b==c):
+        print('Prostokatny')
+
+CzyProstokatny(2,2,4)
+
+def PoleTrapezu(a=3,b=4,h=7):
+    Pole = ((a+b)*h)/2
+    return Pole
+
+print(PoleTrapezu())
+
+def IloczynCiagu(a=1, b=4, ile=10):
+    for i in range(ile):
+        a=a*b
+    return a
+print(IloczynCiagu())
+
+try:
+    a=int(input())
+    print(sqrt(a))
+except ValueError:
+    print('Wartosc ujemna')
+
