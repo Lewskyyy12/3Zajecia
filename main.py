@@ -70,6 +70,27 @@
 #     return sqrt(((x1-x2)**2) + (y1-y2)**2)
 # print(dlugosc_odcinka())
 # print(dlugosc_odcinka(3, 5, 1, 6))
-# print(dlugosc_odcinka(y1=5, x1=3, y2=6, x2=8))
-# print(dlugosc_odcinka(1, 5, y2=8, y1=3))
+# # print(dlugosc_odcinka(y1=5, x1=3, y2=6, x2=8))
+# # print(dlugosc_odcinka(1, 5, y2=8, y1=3))
+# #
 #
+# plik = open('tekst (1).txt', 'r', encoding='utf-8') # C:\\Users\\local\\Downloads
+# znak  = plik.read(10)
+# linia = plik.readline()
+# linie = plik.readlines()
+# plik.close()
+# print(znak)
+# print(linia)
+# print(linie)
+#
+# plik = open('tekst (1).txt', 'a+')
+# plik.write('aaaaa')
+# plik.seek(105)
+# znaki = plik.read(10)
+# plik.close()
+# print(znaki)
+#
+# with open('tekst (1).txt', 'r') as plik:
+#     znaki = plik.read(10)
+#
+# print(znaki)
