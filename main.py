@@ -115,16 +115,23 @@ produkty = {'jajka': 'szt', 'wedlina': 'plasterki', 'mleko': 'litry', 'chipsy' :
 produkty2 = {v: k for k, v in produkty.items()}
 print(produkty)
 print(produkty2)
-
+def CzyTrojkat(a, b, c):
+    if (a ** 2 == b ** 2 * c ** 2):
+        return 1
 def CzyProstokatny(a, b, c):
-    if(a==b):
-        print('Prostokatny')
-    elif(a==c):
-        print('Prostokatny')
-    elif(b==c):
-        print('Prostokatny')
+    if CzyTrojkat(a ,b ,c) or CzyTrojkat(c ,a ,b) or CzyTrojkat(b ,a ,c):
+        if(a==b):
+            print('Jest prostokatny')
+        if(a==c):
+            print('Jest prostokatny')
+        if(b==c):
+            print('Jest prostokatny')
+    else:
+        print('To nie trojkat')
+
 
 CzyProstokatny(2,2,4)
+CzyProstokatny(3,3,6)
 
 def PoleTrapezu(a=3,b=4,h=7):
     Pole = ((a+b)*h)/2
